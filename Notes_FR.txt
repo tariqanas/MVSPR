@@ -1,0 +1,15 @@
+MVC-Client - >> @Controller , @RequestMapping , Model (key , value ) ,
+MVC SERVEUR --> @RestController -> Json
+Dispatcher servlet , ramene la bonne vue en se basant sur le controleur , f spring boot tidirha rasso .
+Templates fiha ce que genere le serveur.
+Static , fiha js o dak chi 
+Spring.thymleaf cache=false pour relancer sans que thymleaf saves the thing in cache
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"/>
+
+href is for the editor but when using a framework u must specify th:href for the generated page 
+
+
+https://www.youtube.com/watch?v=Hrc1QU3Lp8A&t=428s
+
+45: pagination

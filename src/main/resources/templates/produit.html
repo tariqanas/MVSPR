@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>MVC Side Server</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
+th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<center><b><p><u>Liste de produits</u></p></b></center>
+<div class="container">
+<table class="table">
+<thead>
+<tr><th>Id</th><th>Designation</th><th>Prix</th><th>Quantite</th></tr>
+</thead>
+<tbody>
+<tr th:each="p:${lista}">
+<td th:text="${p.id}"></td>
+<td th:text="${p.designation}"></td>
+<td th:text="${p.quantite}"></td>
+<td th:text="${p.prix}"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

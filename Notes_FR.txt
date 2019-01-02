@@ -12,4 +12,4 @@ href is for the editor but when using a framework u must specify th:href for the
 
 https://www.youtube.com/watch?v=Hrc1QU3Lp8A&t=428s
 
-45: pagination
+1h colorer la page en cours ..

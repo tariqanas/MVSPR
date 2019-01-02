@@ -24,5 +24,10 @@ th:href="@{css/bootstrap.min.css}"/>
 </tbody>
 </table>
 </div>
+<ul class="nav nav-pills">
+<li th:each="pages,status:${nbrepages}">
+<a th:href="@{index(page=${status.index},size=9)}" th:text="${status.index}"></a>
+</li>
+</ul>
 </body>
 </html>

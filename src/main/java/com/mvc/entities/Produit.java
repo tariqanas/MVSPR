@@ -15,7 +15,7 @@ public class Produit  implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id ;
-	@Column(unique=true)
+	/*@Column(unique=true)*/
 	private String designation;
 	private Double prix;
 	private Integer quantite;

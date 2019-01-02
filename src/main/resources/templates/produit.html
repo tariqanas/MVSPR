@@ -8,15 +8,15 @@ th:href="@{css/bootstrap.min.css}"/>
 </head>
 <body>
 
-<center><b><p><u>Liste de produits</u></p></b></center>
+<div class="text-light"><center><b><p><u>Liste de produits</u></p></b></center></div>
 <div class="container">
-<table class="table">
+<table class="table table-bordered">
 <thead>
-<tr><th>Id</th><th>Designation</th><th>Prix</th><th>Quantite</th></tr>
+<tr class="bg-info"><th>Id</th><th>Designation</th><th>Quantité</th><th>Prix</th></tr>
 </thead>
 <tbody>
 <tr th:each="p:${lista}">
-<td th:text="${p.id}"></td>
+<td class="bg-danger" th:text="${p.id}"></td>
 <td th:text="${p.designation}"></td>
 <td th:text="${p.quantite}"></td>
 <td th:text="${p.prix}"></td>

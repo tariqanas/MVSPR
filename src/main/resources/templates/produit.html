@@ -10,9 +10,14 @@ th:href="@{css/bootstrap.min.css}"/>
 
 <div class="text-light"><center><b><p><u>Liste de produits</u></p></b></center></div>
 <div class="container">
+<form th:action="@{index}" method="get">
+<label> Chercher par Mot clé : </label>
+<input type="text" name="mc" placeholder="saisir mot clé"/>
+<button class="btn btn-primary ">Chercher</button>
+</form>
 <table class="table table-bordered">
 <thead>
-<tr class="bg-info"><th>Id</th><th>Designation</th><th>Quantité</th><th>Prix</th></tr>
+<tr class="bg-info"><th>Id</th><th>Designation</th><th>Quantité</th><th>Prix</th><th>Delete or Not </th></tr>
 </thead>
 <tbody>
 <tr th:each="p:${lista}">
@@ -20,14 +25,20 @@ th:href="@{css/bootstrap.min.css}"/>
 <td th:text="${p.designation}"></td>
 <td th:text="${p.quantite}"></td>
 <td th:text="${p.prix}"></td>
+<td>
+
+<a th:href="@{delete(id=${p.id},page=${pageC},size=${size})}">Delete</a>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="container">
 <ul class="nav nav-pills">
-<li th:each="pages,status:${nbrepages}">
-<a th:href="@{index(page=${status.index},size=9)}" th:text="${status.index}"></a>
+<li th:class="${pageC}==${status.index}?active:''" th:each="pages,status:${nbrepages}">
+<a th:href="@{index(page=${status.index},size=${size},mc=${mc})}" th:text="${status.index}"></a>
 </li>
 </ul>
+</div>
 </body>
 </html>

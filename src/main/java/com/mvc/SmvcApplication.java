@@ -28,6 +28,7 @@ public class SmvcApplication {
 		pr.save(new Produit("Ordinateur",124.0,2));
 		pr.save(new Produit("Smartphone",124.0,2));
 		pr.save(new Produit("DD Externe",124.0,2));
+		pr.save(new Produit("DD Externe",125.0,2));
 		
 		
 		
